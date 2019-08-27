@@ -2,7 +2,7 @@
 
 jQuery form validator.
 
-    demo: [https://ahmetsagirli.com.tr/ahovalidator/](https://ahmetsagirli.com.tr/ahovalidator/)
+demo: [https://ahmetsagirli.com.tr/ahovalidator/](https://ahmetsagirli.com.tr/ahovalidator/)
     
     <link rel="stylesheet" href="css/ahovalidator.css" />
 
