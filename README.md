@@ -1,6 +1,12 @@
 # ahovalidator.js
 
 jQuery form validator.
+    
+    <link rel="stylesheet" href="css/ahovalidator.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script src="js/ahovalidator.js"></script>
 
     <script>
 	    $(document).ready(function(){
