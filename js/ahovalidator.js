@@ -111,11 +111,20 @@ var ahovalidator = {
             if (ahovalidator.lang == "tr") {
                 return "Bu alanı doldurmak zorunludur.";
             }
+            if (ahovalidator.lang == "az") {
+                return "Bu sahəni doldurmaq məcburidir.";
+            }
             if (ahovalidator.lang == "en") {
                 return "Please fill in this field.";
             }
             if (ahovalidator.lang == "fr") {
                 return "S'il vous plaît remplir ce champ.";
+            }
+            if (ahovalidator.lang == "de") {
+                return "Dieses Feld muss unbedingt ausgefüllt werden.";
+            }
+            if (ahovalidator.lang == "es") {
+                return "Es obligatorio completar este campo.";
             }
             if (ahovalidator.lang == "it") {
                 return "Si prega di compilare questo campo.";
@@ -126,16 +135,34 @@ var ahovalidator = {
             if (ahovalidator.lang == "ru") {
                 return "Пожалуйста, заполните это поле.";
             }
+            if (ahovalidator.lang == "ua") {
+                return "Обов’язково заповнюйте це поле.";
+            }
+            if (ahovalidator.lang == "cn") {
+                return "必须填写此字段。";
+            }
+            if (ahovalidator.lang == "jp") {
+                return "このフィールドに入力する必要があります。";
+            }
         }
         if(event == "requiredEmail"){
             if (ahovalidator.lang == "tr") {
                 return "Geçerli bir e-posta adresi giriniz.";
+            }
+            if (ahovalidator.lang == "az") {
+                return "Zəhmət olmasa e-poçt ünvanı daxil edin.";
             }
             if (ahovalidator.lang == "en") {
                 return "Please enter a valid e-mail address.";
             }
             if (ahovalidator.lang == "fr") {
                 return "S'il vous plaît, mettez une adresse email valide.";
+            }
+            if (ahovalidator.lang == "de") {
+                return "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+            }
+            if (ahovalidator.lang == "es") {
+                return "Por favor, introduzca una dirección de correo electrónico válida.";
             }
             if (ahovalidator.lang == "it") {
                 return "Si prega di inserire un indirizzo email valido.";
@@ -145,6 +172,15 @@ var ahovalidator = {
             }
             if (ahovalidator.lang == "ru") {
                 return "Пожалуйста, введите действительный адрес электронной почты.";
+            }
+            if (ahovalidator.lang == "ua") {
+                return "Введіть дійсну адресу електронної пошти.";
+            }
+            if (ahovalidator.lang == "cn") {
+                return "请输入有效的电子邮件地址。";
+            }
+            if (ahovalidator.lang == "jp") {
+                return "有効なメールアドレスを入力してください。";
             }
         }
     }
