@@ -1,11 +1,16 @@
 var ahovalidator = {
     form: null,
     lang: null,
-    build: function(e){
-        ahovalidator.form = $(e);
-        ahovalidator.lang = $('html').attr('lang') ? $('html').attr('lang') : 'tr';
-        ahovalidator.clicks.submit();
-        ahovalidator.clicks.items();
+    build: function(){
+        $('form').each(function(){
+            if ($(this).find('.ahov-required').length) {
+                ahovalidator.form = $(this);
+                ahovalidator.lang = $('html').attr('lang') ? $('html').attr('lang') : 'tr';
+                $(this).find('[type=submit]').attr('data-ahov-formId', $(this).attr('id'));
+                ahovalidator.clicks.submit();
+                ahovalidator.clicks.items();
+            }
+        });
     },
     funcs: {
         addMessage: function(event){
@@ -22,12 +27,12 @@ var ahovalidator = {
         }
     },
     events: {
-        control: function(){
+        control: function(th){
             var error_counter = 0;
 
-            var input = ahovalidator.form.find('input');
-            var textarea = ahovalidator.form.find('textarea');
-            var select = ahovalidator.form.find('select');
+            var input = $(th).find('input');
+            var textarea = $(th).find('textarea');
+            var select = $(th).find('select');
             
             input.each(function(){
                 $(this).removeClass('ahov-message');
@@ -91,9 +96,9 @@ var ahovalidator = {
         submit: function(){
             ahovalidator.form.find('[type="submit"]').click(function(e){
                 e.preventDefault();
-                var status = ahovalidator.events.control();
+                var status = ahovalidator.events.control("#" + $(this).attr('data-ahov-formId') );
                 if (status) {
-                    ahovalidator.form.submit();
+                    $('form#' + $(this).attr('data-ahov-formId') ).submit();
                 }
             });
         },

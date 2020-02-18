@@ -12,7 +12,7 @@ demo: [https://ahmetsagirli.com.tr/ahovalidator/](https://ahmetsagirli.com.tr/ah
 
     <script>
 	    $(document).ready(function(){
-	        ahovalidator.build('#form');
+	        ahovalidator.build();
 	    });
 	</script>
 
